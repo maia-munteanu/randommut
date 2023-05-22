@@ -108,12 +108,7 @@ def randomize(muts_path, genome_path, assembly, times, winlen, verbose, b_size):
     # import pdb; pdb.set_trace()
     if len(full_df) > 1:
         #final_df = full_df[0].append(full_df[1:]) removed because append is deprecated
-        #final_df = pd.concat([full_df[0], pd.DataFrame([full_df[1:]])], ignore_index=True)   first try
-        #final_df = pd.concat([full_df[0], pd.DataFrame([full_df[1:]])])   second try
-        #final_df = pd.concat([full_df[0], full_df[1:]]) third try
         final_df = pd.concat(full_df)
-
-        
     elif len(full_df) == 1:
         #can hapen if only 1 chromosome
         final_df = full_df[0]
