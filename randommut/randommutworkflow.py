@@ -110,12 +110,8 @@ def randomize(muts_path, genome_path, assembly, times, winlen, verbose, b_size):
         #final_df = full_df[0].append(full_df[1:]) removed because append is deprecated
         #final_df = pd.concat([full_df[0], pd.DataFrame([full_df[1:]])], ignore_index=True)   first try
         #final_df = pd.concat([full_df[0], pd.DataFrame([full_df[1:]])])   second try
-        
-        print(type(full_df[0]), file=sys.stderr)
-        print(type(full_df), file=sys.stderr)
-        print(len(full_df), file=sys.stderr)
-
-        final_df = pd.concat([full_df[0], full_df[1:]])
+        #final_df = pd.concat([full_df[0], full_df[1:]]) third try
+        final_df = pd.concat(full_df)
 
         
     elif len(full_df) == 1:
