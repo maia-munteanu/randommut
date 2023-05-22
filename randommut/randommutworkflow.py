@@ -111,10 +111,10 @@ def randomize(muts_path, genome_path, assembly, times, winlen, verbose, b_size):
         #final_df = pd.concat([full_df[0], pd.DataFrame([full_df[1:]])], ignore_index=True)   first try
         #final_df = pd.concat([full_df[0], pd.DataFrame([full_df[1:]])])   second try
         
-        print(full_df.shape, file=sys.stderr)
-        print(full_df[0].shape, file=sys.stderr)
-        print(full_df[1:].shape, file=sys.stderr)
-        
+        print(type(full_df[0]), file=sys.stderr)
+        print(type(full_df), file=sys.stderr)
+        print(len(full_df), file=sys.stderr)
+
         final_df = pd.concat([full_df[0], full_df[1:]])
 
         
